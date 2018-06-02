@@ -24,3 +24,11 @@ ggplot(db_aggr, aes(x = "", y = n, fill = platform)) + geom_bar(width = 1, stat 
 
 db_aggr <- dplyr::count(db, platform, sort = T)
 ggplot(head(db_aggr), aes(x=platform, y=n, fill=platform)) + geom_bar(stat = "identity")
+
+if (!require("swirl")) {
+  install.packages("swirl", repos="http://cran.rstudio.com/", quiet = T)
+}
+
+library(swirl)
+
+swirl()
